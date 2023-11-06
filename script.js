@@ -84,6 +84,51 @@ console.log(todoItems);
 // Initialize the array of To Do items
 let todoItems = [];
 
+// Function to add a todo to the list
+function addToDoItem(item) {
+  const newTodo = {
+    id: todoItems.length,
+    text: item,
+    completed: false,
+  };
+  todoItems.push(newTodo);
+}
+
+// Function to remove a todo from the list
+function removeToDoItem(item) {
+  todoItems = todoItems.filter(todo => todo.id !== item);
+}
+
+// Function to mark a task as completed
+function markToDoItemAsCompleted(item) {
+  const todoItem = todoItems.find(todo => todo.id === item);
+  if (todoItem) {
+    todoItem.completed = true;
+  }
+}
+
+// Function to delete a task from the array
+function deleteToDoItem(todoId) {
+  todoItems = todoItems.filter(todo => todo.id !== todoId);
+}
+
+// Function to clear all completed tasks
+function clearCompletedTasks() {
+  todoItems = todoItems.filter(todo => !todo.completed);
+}
+
+// You can write your own tests here if you would like to test your code
+// For example:
+// addToDoItem("Test ToDo");
+// console.log(todoItems);
+// removeToDoItem(0);
+// console.log(todoItems);
+// markToDoItemAsCompleted(1);
+// console.log(todoItems);
+// deleteToDoItem(1);
+// console.log(todoItems);
+// clearCompletedTasks();
+// console.log(todoItems);
 // Add some items to the list
 addToDoItem('Buy milk');
 addToDoItem('Walk the dog');

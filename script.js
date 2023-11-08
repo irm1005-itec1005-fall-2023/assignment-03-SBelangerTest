@@ -86,34 +86,3 @@ function clearCompletedTasks() {
 
 console.log(todoItems);
 
-// Function to add a todo to the list
-function addToDoItem(item) {
-  const newTodo = {
-    id: todoItems.length,
-    text: item,
-    completed: false,
-  };
-}
-
-// Function to remove a todo from the list
-function removeToDoItem(item) {
-  todoItems = todoItems.filter(todo => todo.id !== item);
-}
-
-// Function to mark a task as completed
-function markToDoItemAsCompleted(item) {
-  const todoItem = todoItems.find(todo => todo.id === item);
-  if (todoItem) {
-    todoItem.completed = true;
-  }
-}
-
-// Function to delete a task from the array
-function deleteToDoItem(todoId) {
-  todoItems = todoItems.filter(todo => todo.id !== todoId);
-}
-
-// Function to clear all completed tasks
-function clearCompletedTasks() {
-  todoItems = todoItems.filter(todo => !todo.completed);
-}

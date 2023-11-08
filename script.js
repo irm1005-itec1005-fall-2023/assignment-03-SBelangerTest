@@ -32,7 +32,7 @@
 */
 
 // Data storage - Initialize the array of To Do items
-
+let todoItems = [];
 
 // Function to add a todo to the list
 function addToDoItem(item) {
@@ -67,7 +67,7 @@ function clearCompletedTasks() {
   todoItems = todoItems.filter(todo => !todo.completed);
 }
 
-console.log(todoItems);
+
 
 // You can write your own tests here if you would like to test your code
 // For example:
@@ -83,7 +83,8 @@ console.log(todoItems);
 // console.log(todoItems);
 // Initialize the array of To Do items
 // Initialize the array of To Do items
-let todoItems = [];
+
+console.log(todoItems);
 
 // Function to add a todo to the list
 function addToDoItem(item) {
@@ -92,7 +93,6 @@ function addToDoItem(item) {
     text: item,
     completed: false,
   };
-  todoItems.push(newTodo);
 }
 
 // Function to remove a todo from the list
